@@ -1,0 +1,309 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.example.j13tw.menu_quit.Main">
+
+    <TextView
+        android:id="@+id/textView12"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="0dp"
+        android:layout_marginTop="24dp"
+        android:text="－"
+        app:layout_constraintLeft_toRightOf="@+id/choosePeople"
+        app:layout_constraintTop_toBottomOf="@+id/textView2" />
+
+    <TextView
+        android:id="@+id/choosePeople"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="24dp"
+        android:text="人數"
+        app:layout_constraintTop_toBottomOf="@+id/textView2"
+        app:layout_constraintLeft_toRightOf="@+id/textView11"
+        android:layout_marginLeft="0dp" />
+
+    <TextView
+        android:id="@+id/chooseSeat"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="-1dp"
+        android:layout_marginTop="24dp"
+        android:text="座位"
+        app:layout_constraintLeft_toRightOf="@+id/textView12"
+        app:layout_constraintTop_toBottomOf="@+id/textView2" />
+
+    <TextView
+        android:id="@+id/restaurantName"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="16dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="16dp"
+        android:text="NUTC - 大平台餐廳"
+        android:textAppearance="@style/TextAppearance.AppCompat.Body2"
+        android:textSize="18sp"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <RadioButton
+        android:id="@+id/floorA"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="一樓"
+        android:layout_marginLeft="8dp"
+        app:layout_constraintLeft_toRightOf="@+id/textView2"
+        android:layout_marginStart="8dp"
+        app:layout_constraintTop_toTopOf="@+id/textView2"
+        android:layout_marginTop="0dp"
+        app:layout_constraintBottom_toBottomOf="@+id/textView2"
+        android:layout_marginBottom="0dp" />
+
+    <RadioButton
+        android:id="@+id/floorB"
+        android:layout_width="60dp"
+        android:layout_height="32dp"
+        android:text="二樓"
+        app:layout_constraintLeft_toRightOf="@+id/floorA"
+        android:layout_marginLeft="24dp"
+        app:layout_constraintTop_toTopOf="@+id/textView2"
+        android:layout_marginTop="0dp"
+        app:layout_constraintBottom_toBottomOf="@+id/textView2"
+        android:layout_marginBottom="0dp" />
+
+    <TextView
+        android:id="@+id/textView2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="16dp"
+        android:text="喜好樓層選擇："
+        app:layout_constraintLeft_toLeftOf="parent"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="24dp"
+        app:layout_constraintTop_toBottomOf="@+id/textView9" />
+
+    <Button
+        android:id="@+id/seatChooseA"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="32dp"
+        android:layout_marginStart="32dp"
+        android:text="2人座"
+        app:layout_constraintLeft_toLeftOf="parent"
+        android:layout_marginTop="16dp"
+        app:layout_constraintTop_toBottomOf="@+id/textView3" />
+
+    <Button
+        android:id="@+id/seatChooseB"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="0dp"
+        android:layout_marginLeft="24dp"
+        android:layout_marginTop="0dp"
+        android:text="4人座"
+        app:layout_constraintBottom_toBottomOf="@+id/seatChooseA"
+        app:layout_constraintLeft_toRightOf="@+id/seatChooseA"
+        app:layout_constraintTop_toTopOf="@+id/seatChooseA"
+        app:layout_constraintVertical_bias="0.0" />
+
+    <Button
+        android:id="@+id/seatChooseC"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="0dp"
+        android:layout_marginLeft="24dp"
+        android:layout_marginTop="0dp"
+        android:text="6人座"
+        app:layout_constraintBottom_toBottomOf="@+id/seatChooseB"
+        app:layout_constraintLeft_toRightOf="@+id/seatChooseB"
+        app:layout_constraintTop_toTopOf="@+id/seatChooseB"
+        app:layout_constraintVertical_bias="0.0" />
+
+    <Button
+        android:id="@+id/seatChooseD"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="32dp"
+        android:layout_marginStart="32dp"
+        android:layout_marginTop="16dp"
+        android:text="8人座"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/seatChooseA" />
+
+    <Button
+        android:id="@+id/seatChooseE"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="24dp"
+        android:layout_marginTop="16dp"
+        android:text="10人座"
+        app:layout_constraintLeft_toRightOf="@+id/seatChooseD"
+        app:layout_constraintTop_toBottomOf="@+id/seatChooseB" />
+
+    <TextView
+        android:id="@+id/textView3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="16dp"
+        android:layout_marginStart="16dp"
+        android:text="來店人數及座位選擇："
+        app:layout_constraintLeft_toLeftOf="parent"
+        android:layout_marginTop="24dp"
+        app:layout_constraintTop_toBottomOf="@+id/textView2" />
+
+    <CheckBox
+        android:id="@+id/childChair"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="8dp"
+        android:layout_marginTop="0dp"
+        android:text="需要："
+        app:layout_constraintLeft_toRightOf="@+id/textView"
+        android:layout_marginStart="8dp"
+        app:layout_constraintTop_toTopOf="@+id/textView"
+        app:layout_constraintBottom_toBottomOf="@+id/textView"
+        android:layout_marginBottom="0dp" />
+
+    <TextView
+        android:id="@+id/textView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="16dp"
+        android:text="是否需要兒童座椅："
+        app:layout_constraintLeft_toLeftOf="parent"
+        android:layout_marginTop="24dp"
+        app:layout_constraintTop_toBottomOf="@+id/seatChooseD"
+        android:layout_marginStart="16dp" />
+
+    <EditText
+        android:id="@+id/childChairCount"
+        android:layout_width="50dp"
+        android:layout_height="wrap_content"
+        android:ems="10"
+        android:inputType="numberSigned"
+        app:layout_constraintLeft_toRightOf="@+id/childChair"
+        android:layout_marginLeft="28dp"
+        android:layout_marginTop="0dp"
+        app:layout_constraintTop_toTopOf="@+id/childChair"
+        app:layout_constraintBottom_toBottomOf="@+id/childChair"
+        android:layout_marginBottom="0dp"
+        app:layout_constraintVertical_bias="0.545" />
+
+    <TextView
+        android:id="@+id/textView5"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="7dp"
+        android:text="張"
+        app:layout_constraintLeft_toRightOf="@+id/childChairCount"
+        android:layout_marginTop="8dp"
+        app:layout_constraintTop_toTopOf="@+id/childChairCount"
+        app:layout_constraintBottom_toBottomOf="@+id/childChairCount"
+        android:layout_marginBottom="8dp" />
+
+    <Button
+        android:id="@+id/seatChooseF"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="24dp"
+        android:layout_marginTop="16dp"
+        android:text="12人座"
+        app:layout_constraintLeft_toRightOf="@+id/seatChooseE"
+        app:layout_constraintTop_toBottomOf="@+id/seatChooseC" />
+
+    <RadioButton
+        android:id="@+id/floorC"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="24dp"
+        android:text="三樓"
+        app:layout_constraintLeft_toRightOf="@+id/floorB"
+        app:layout_constraintTop_toTopOf="@+id/floorB"
+        android:layout_marginTop="0dp"
+        app:layout_constraintBottom_toBottomOf="@+id/floorB"
+        android:layout_marginBottom="0dp" />
+
+    <TextView
+        android:id="@+id/chooseFloor"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="8dp"
+        android:layout_marginTop="24dp"
+        android:text="樓層"
+        app:layout_constraintLeft_toRightOf="@+id/textView3"
+        app:layout_constraintTop_toBottomOf="@+id/textView2" />
+
+    <TextView
+        android:id="@+id/textView7"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="1樓 - 中式合菜餐廳"
+        app:layout_constraintLeft_toRightOf="@+id/textView10"
+        android:layout_marginLeft="24dp"
+        app:layout_constraintTop_toTopOf="@+id/textView10"
+        android:layout_marginTop="0dp" />
+
+    <TextView
+        android:id="@+id/textView8"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="2樓 - 港式飲茶中心"
+        android:layout_marginLeft="0dp"
+        app:layout_constraintLeft_toLeftOf="@+id/textView7"
+        android:layout_marginTop="8dp"
+        app:layout_constraintTop_toBottomOf="@+id/textView7" />
+
+    <TextView
+        android:id="@+id/textView9"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="3樓 - 下午茶景觀會所"
+        android:layout_marginTop="8dp"
+        app:layout_constraintTop_toBottomOf="@+id/textView8"
+        android:layout_marginLeft="0dp"
+        app:layout_constraintLeft_toLeftOf="@+id/textView8" />
+
+    <TextView
+        android:id="@+id/textView10"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="16dp"
+        android:text="本餐廳各樓層簡介："
+        app:layout_constraintLeft_toLeftOf="parent"
+        android:layout_marginTop="16dp"
+        app:layout_constraintTop_toBottomOf="@+id/restaurantName" />
+
+    <Button
+        android:id="@+id/clear"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="清除表單"
+        android:layout_marginTop="32dp"
+        app:layout_constraintTop_toBottomOf="@+id/textView"
+        android:layout_marginLeft="32dp"
+        app:layout_constraintLeft_toLeftOf="parent" />
+
+    <Button
+        android:id="@+id/sendList"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="32dp"
+        android:layout_marginTop="32dp"
+        android:text="送出劃位資訊"
+        app:layout_constraintLeft_toRightOf="@+id/clear"
+        app:layout_constraintTop_toBottomOf="@+id/textView" />
+
+    <TextView
+        android:id="@+id/textView11"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="－"
+        android:layout_marginTop="24dp"
+        app:layout_constraintTop_toBottomOf="@+id/textView2"
+        app:layout_constraintLeft_toRightOf="@+id/chooseFloor"
+        android:layout_marginLeft="0dp" />
+
+</android.support.constraint.ConstraintLayout>
