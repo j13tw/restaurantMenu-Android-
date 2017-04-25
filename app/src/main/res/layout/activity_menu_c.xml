@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context="com.example.j13tw.menu_quit.MenuA">
+    tools:context="com.example.j13tw.menu_quit.MenuC">
 
     <EditText
         android:id="@+id/countD"
@@ -95,7 +95,7 @@
         app:layout_constraintBottom_toBottomOf="@+id/TypeA"
         app:layout_constraintLeft_toRightOf="@+id/TypeA"
         app:layout_constraintTop_toTopOf="@+id/TypeA"
-        app:srcCompat="@drawable/lll" />
+        app:srcCompat="@drawable/zzz" />
 
     <EditText
         android:id="@+id/countA"
@@ -155,7 +155,7 @@
         android:layout_height="wrap_content"
         android:layout_marginLeft="16dp"
         android:layout_marginTop="24dp"
-        android:text="客家小炒 $120一盤約800卡"
+        android:text="豬肉河粉 $180一盤約300卡"
         app:layout_constraintLeft_toLeftOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/textView" />
 
@@ -164,9 +164,9 @@
         android:layout_width="125dp"
         android:layout_height="wrap_content"
         android:layout_marginLeft="16dp"
-        android:text="辣炒箭筍$130一盤約500卡"
-        app:layout_constraintLeft_toLeftOf="parent"
         android:layout_marginTop="32dp"
+        android:text="月亮蝦餅$200一盤約550卡"
+        app:layout_constraintLeft_toLeftOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/TypeA" />
 
     <CheckBox
@@ -175,7 +175,7 @@
         android:layout_height="wrap_content"
         android:layout_marginLeft="16dp"
         android:layout_marginTop="32dp"
-        android:text="五更腸旺$200一盤約950卡"
+        android:text="花枝煎餅$150一盤約250卡"
         app:layout_constraintLeft_toLeftOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/TypeC" />
 
@@ -185,7 +185,7 @@
         android:layout_height="wrap_content"
         android:layout_marginLeft="16dp"
         android:layout_marginTop="32dp"
-        android:text="現炒時蔬$100一盤約300卡"
+        android:text="蔬食沙拉$170一盤約150卡"
         app:layout_constraintLeft_toLeftOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/TypeD" />
 
@@ -195,7 +195,7 @@
         android:layout_height="wrap_content"
         android:layout_marginLeft="16dp"
         android:layout_marginTop="29dp"
-        android:text="竹筍肉絲$180一盤約350卡"
+        android:text="煎蘿蔔糕$100一盤約200卡"
         app:layout_constraintLeft_toLeftOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/TypeE" />
 
@@ -205,7 +205,7 @@
         android:layout_height="wrap_content"
         android:layout_marginLeft="16dp"
         android:layout_marginTop="16dp"
-        android:text="中式合菜餐廳"
+        android:text="下午茶景觀會所"
         app:layout_constraintLeft_toLeftOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
@@ -243,7 +243,7 @@
         app:layout_constraintLeft_toRightOf="@+id/TypeC"
         app:layout_constraintTop_toTopOf="@+id/TypeC"
         app:layout_constraintVertical_bias="0.529"
-        app:srcCompat="@drawable/nnn" />
+        app:srcCompat="@drawable/bbb" />
 
     <ImageView
         android:id="@+id/imageView11"
@@ -255,7 +255,7 @@
         app:layout_constraintBottom_toBottomOf="@+id/TypeD"
         app:layout_constraintLeft_toRightOf="@+id/TypeD"
         app:layout_constraintTop_toTopOf="@+id/TypeD"
-        app:srcCompat="@drawable/qqq" />
+        app:srcCompat="@drawable/ccc" />
 
     <ImageView
         android:id="@+id/imageView14"
@@ -265,7 +265,7 @@
         app:layout_constraintBottom_toBottomOf="@+id/TypeE"
         app:layout_constraintLeft_toRightOf="@+id/TypeE"
         app:layout_constraintTop_toTopOf="@+id/TypeE"
-        app:srcCompat="@drawable/ooo"
+        app:srcCompat="@drawable/ddd"
         tools:layout_editor_absoluteX="165dp"
         tools:layout_editor_absoluteY="317dp" />
 
@@ -279,7 +279,7 @@
         app:layout_constraintBottom_toBottomOf="@+id/TypeF"
         app:layout_constraintLeft_toRightOf="@+id/TypeF"
         app:layout_constraintTop_toTopOf="@+id/TypeF"
-        app:srcCompat="@drawable/ppp" />
+        app:srcCompat="@drawable/eee" />
 
     <ImageView
         android:id="@+id/imageView22"
@@ -292,7 +292,7 @@
         app:layout_constraintLeft_toRightOf="@+id/TypeB"
         app:layout_constraintTop_toTopOf="@+id/TypeB"
         app:layout_constraintVertical_bias="0.515"
-        app:srcCompat="@drawable/mmm" />
+        app:srcCompat="@drawable/aaa" />
 
     <Button
         android:id="@+id/takeCash"
@@ -374,10 +374,10 @@
         android:id="@+id/TypeC"
         android:layout_width="125dp"
         android:layout_height="wrap_content"
-        android:layout_marginTop="32dp"
-        android:text="鐵板豆腐 $250一盤約900卡"
-        app:layout_constraintTop_toBottomOf="@+id/TypeB"
         android:layout_marginLeft="16dp"
-        app:layout_constraintLeft_toLeftOf="parent" />
+        android:layout_marginTop="32dp"
+        android:text="油條粉腸$230一盤約350卡"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/TypeB" />
 
 </android.support.constraint.ConstraintLayout>

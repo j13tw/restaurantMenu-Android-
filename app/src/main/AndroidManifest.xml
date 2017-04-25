@@ -16,9 +16,10 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name=".Menu" />
         <activity android:name=".ShowCash" />
-        <activity android:name=".SeatSearch" />
+        <activity android:name=".MenuB" />
+        <activity android:name=".MenuA" />
+        <activity android:name=".MenuC"></activity>
     </application>
 
 </manifest>

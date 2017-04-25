@@ -2,10 +2,10 @@ package com.example.j13tw.menu_quit;
 
 import android.content.DialogInterface;
 import android.content.Intent;
-import android.support.annotation.Nullable;
 import android.support.v7.app.AlertDialog;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.view.Menu;
 import android.view.View;
 import android.widget.Button;
 import android.widget.CheckBox;
@@ -21,6 +21,7 @@ public class Main extends AppCompatActivity {
     TextView chooseFloor, choosePeople, chooseSeat;
     CheckBox childChair;
     EditText childChairCount;
+    int peopleCount = 0;
 
     public int errorA(){   //尚未點選樓層就選來店用餐人數
         int errorCodeA = 0; //錯誤判斷代碼
@@ -58,20 +59,30 @@ public class Main extends AppCompatActivity {
     }
     public int errorC(){
         int errorCodeC = 0;
-        if (childChair.isChecked()) {
-            if (("".equals(childChairCount.getText().toString())) || (Integer.parseInt(childChairCount.getText().toString()) <= 0)) {
+        if ((!childChair.isChecked()) && !("".equals(childChairCount.getText().toString()))) {
+            errorCodeC = 1;
+        }
+        if (childChair.isChecked()){
+            if("".equals(childChairCount.getText().toString())){
                 errorCodeC = 1;
-                AlertDialog.Builder checkChild = new AlertDialog.Builder(Main.this);
-                checkChild.setTitle("APP 流程錯誤");
-                checkChild.setMessage("請確認兒童座椅數量!!!");
-                checkChild.setCancelable(false);
-                checkChild.setPositiveButton("確認", new DialogInterface.OnClickListener() {
-                    @Override
-                    public void onClick(DialogInterface dialog, int which) {
-                    }
-                });
-                checkChild.show();
             }
+            if(!("".equals(childChairCount.getText().toString()))){
+                if(Integer.parseInt(childChairCount.getText().toString()) <= 0){
+                    errorCodeC = 1;
+                }
+            }
+        }
+        if(errorCodeC == 1){
+            AlertDialog.Builder checkChild = new AlertDialog.Builder(Main.this);
+            checkChild.setTitle("APP 流程錯誤");
+            checkChild.setMessage("請確認兒童座椅數量!!!");
+            checkChild.setCancelable(false);
+            checkChild.setPositiveButton("確認", new DialogInterface.OnClickListener() {
+                @Override
+                public void onClick(DialogInterface dialog, int which) {
+                }
+            });
+            checkChild.show();
         }
         return errorCodeC;
     }
@@ -122,6 +133,7 @@ public class Main extends AppCompatActivity {
         checkSeat.show();
     }
 
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -150,6 +162,8 @@ public class Main extends AppCompatActivity {
                 floorB.setChecked(false);
                 floorC.setChecked(false);
                 chooseFloor.setText("1樓");
+                choosePeople.setText("人數");
+                chooseSeat.setText("座位");
             }
         });
         floorB.setOnClickListener(new View.OnClickListener() {
@@ -158,6 +172,8 @@ public class Main extends AppCompatActivity {
                 floorA.setChecked(false);
                 floorC.setChecked(false);
                 chooseFloor.setText("2樓");
+                choosePeople.setText("人數");
+                chooseSeat.setText("座位");
             }
         });
         floorC.setOnClickListener(new View.OnClickListener() {
@@ -166,6 +182,8 @@ public class Main extends AppCompatActivity {
                 floorA.setChecked(false);
                 floorB.setChecked(false);
                 chooseFloor.setText("3樓");
+                choosePeople.setText("人數");
+                chooseSeat.setText("座位");
             }
         });
         seatChooseA.setOnClickListener(new View.OnClickListener() {
@@ -174,6 +192,7 @@ public class Main extends AppCompatActivity {
                 if(errorA() == 0){
                     choosePeople.setText("2人座");
                     people(0);
+                    peopleCount = 2;
                 }
             }
         });
@@ -183,6 +202,7 @@ public class Main extends AppCompatActivity {
                 if(errorA() == 0){
                     choosePeople.setText("4人座");
                     people(1);
+                    peopleCount = 4;
                 }
             }
         });
@@ -192,6 +212,7 @@ public class Main extends AppCompatActivity {
                 if(errorA() == 0){
                     choosePeople.setText("6人座");
                     people(2);
+                    peopleCount = 6;
                 }
             }
         });
@@ -201,6 +222,7 @@ public class Main extends AppCompatActivity {
                 if(errorA() == 0){
                     choosePeople.setText("8人座");
                     people(3);
+                    peopleCount = 8;
                 }
             }
         });
@@ -220,6 +242,7 @@ public class Main extends AppCompatActivity {
                 if(errorA() == 0){
                     choosePeople.setText("12人座");
                     people(5);
+                    peopleCount = 12;
                 }
             }
         });
@@ -241,8 +264,11 @@ public class Main extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 if (errorA() == 0 && errorB() == 0 && errorC() == 0){
-                    if(childChair.isChecked()) {
+                    if(childChair.isChecked() && !("".equals(childChairCount.getText().toString()))) {
                         childcount = Integer.parseInt(childChairCount.getText().toString());
+                    }
+                    else{
+                        childcount = 0;
                     }
                     AlertDialog.Builder checkSend = new AlertDialog.Builder(Main.this);
                     checkSend.setTitle("劃位確認");
@@ -251,18 +277,30 @@ public class Main extends AppCompatActivity {
                     checkSend.setNegativeButton("確認", new DialogInterface.OnClickListener() {
                         @Override
                         public void onClick(DialogInterface dialog, int which) {
-                            if(floorCheck() == 0){
-
-                            }
-                            else if(floorCheck() == 1){
-
-                            }
-                            else if(floorCheck() == 2){
-
-                            }
-                            Intent Menu = new Intent();
-                            startActivity(new Intent(Main.this, Menu.class));
-                            //finish();
+                        Bundle bundle = new Bundle();
+                        bundle.putString("floor", chooseFloor.getText().toString());
+                        bundle.putString("people", choosePeople.getText().toString());
+                        bundle.putString("seat", chooseSeat.getText().toString());
+                        bundle.putInt("child", childcount);
+                        bundle.putInt("peopleCount", peopleCount);
+                        if(floorCheck() == 0){
+                        Intent MenuA = new Intent();
+                        MenuA.setClass(Main.this,MenuA.class);
+                        MenuA.putExtras(bundle);
+                        startActivity(MenuA);
+                        }
+                        else if(floorCheck() == 1){
+                            Intent MenuB = new Intent();
+                            MenuB.setClass(Main.this,MenuB.class);
+                            MenuB.putExtras(bundle);
+                            startActivity(MenuB);
+                        }
+                        else if(floorCheck() == 2){
+                            Intent MenuC = new Intent();
+                            MenuC.setClass(Main.this,MenuC.class);
+                            MenuC.putExtras(bundle);
+                            startActivity(MenuC);
+                        }
                         }
                     });
                     checkSend.setPositiveButton("取消", new DialogInterface.OnClickListener() {

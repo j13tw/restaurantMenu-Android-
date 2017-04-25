@@ -283,14 +283,14 @@
         android:text="清除表單"
         android:layout_marginTop="32dp"
         app:layout_constraintTop_toBottomOf="@+id/textView"
-        android:layout_marginLeft="32dp"
+        android:layout_marginLeft="128dp"
         app:layout_constraintLeft_toLeftOf="parent" />
 
     <Button
         android:id="@+id/sendList"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginLeft="32dp"
+        android:layout_marginLeft="16dp"
         android:layout_marginTop="32dp"
         android:text="送出劃位資訊"
         app:layout_constraintLeft_toRightOf="@+id/clear"
