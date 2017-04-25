@@ -216,8 +216,6 @@ public class MenuC extends AppCompatActivity {
                     });
                     sendCheck.show();
                 }
-                //desk.setText(Integer.toString(cash));
-                //child.setText(Integer.toString(kal));
             }
         });
         clearMenu.setOnClickListener(new View.OnClickListener() {
