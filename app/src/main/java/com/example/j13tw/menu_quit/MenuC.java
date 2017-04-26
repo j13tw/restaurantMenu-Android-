@@ -78,6 +78,7 @@ public class MenuC extends AppCompatActivity {
                 }
                 if(TypeA.isChecked() && !("".equals(countA.getText().toString())) && (errorCheck == 0)){
                     if(Integer.parseInt(countA.getText().toString()) <= 0){
+                        errorCheck++;
                         errorA();
                     }
                     else{
@@ -89,6 +90,7 @@ public class MenuC extends AppCompatActivity {
                     //TypeA.setChecked(true);
                 }
                 else if(!TypeA.isChecked() && !("".equals(countA.getText().toString())) && errorCheck == 0){
+                    errorCheck++;
                     errorA();
                 }
                 else{
@@ -96,6 +98,7 @@ public class MenuC extends AppCompatActivity {
                 }
                 if(TypeB.isChecked() && !("".equals(countB.getText().toString())) && errorCheck == 0){
                     if(Integer.parseInt(countB.getText().toString()) <= 0){
+                        errorCheck++;
                         errorA();
                     }
                     else{
@@ -107,6 +110,7 @@ public class MenuC extends AppCompatActivity {
                     //TypeB.setChecked(true);
                 }
                 else if(!TypeB.isChecked() && !("".equals(countB.getText().toString())) && errorCheck == 0){
+                    errorCheck++;
                     errorA();
                 }
                 else{
@@ -114,6 +118,7 @@ public class MenuC extends AppCompatActivity {
                 }
                 if(TypeC.isChecked() && !("".equals(countC.getText().toString())) && errorCheck == 0){
                     if(Integer.parseInt(countC.getText().toString()) <= 0){
+                        errorCheck++;
                         errorA();
                     }
                     else{
@@ -125,6 +130,7 @@ public class MenuC extends AppCompatActivity {
                     //TypeC.setChecked(true);
                 }
                 else if(!TypeC.isChecked() && !("".equals(countC.getText().toString())) && errorCheck == 0){
+                    errorCheck++;
                     errorA();
                 }
                 else{
@@ -132,6 +138,7 @@ public class MenuC extends AppCompatActivity {
                 }
                 if(TypeD.isChecked() && !("".equals(countD.getText().toString())) && errorCheck == 0){
                     if(Integer.parseInt(countD.getText().toString()) <= 0){
+                        errorCheck++;
                         errorA();
                     }
                     else{
@@ -143,6 +150,7 @@ public class MenuC extends AppCompatActivity {
                     //TypeD.setChecked(true);
                 }
                 else if(!TypeD.isChecked() && !("".equals(countD.getText().toString())) && errorCheck == 0){
+                    errorCheck++;
                     errorA();
                 }
                 else{
@@ -150,6 +158,7 @@ public class MenuC extends AppCompatActivity {
                 }
                 if(TypeE.isChecked() && !("".equals(countE.getText().toString())) && errorCheck == 0){
                     if(Integer.parseInt(countE.getText().toString()) <= 0){
+                        errorCheck++;
                         errorA();
                     }
                     else{
@@ -161,6 +170,7 @@ public class MenuC extends AppCompatActivity {
                     //TypeE.setChecked(true);
                 }
                 else if(!TypeE.isChecked() && !("".equals(countE.getText().toString())) && errorCheck == 0){
+                    errorCheck++;
                     errorA();
                 }
                 else{
@@ -168,6 +178,7 @@ public class MenuC extends AppCompatActivity {
                 }
                 if(TypeF.isChecked() && !("".equals(countF.getText().toString())) && errorCheck == 0){
                     if(Integer.parseInt(countF.getText().toString()) <= 0){
+                        errorCheck++;
                         errorA();
                     }
                     else{
@@ -179,6 +190,7 @@ public class MenuC extends AppCompatActivity {
                     //TypeF.setChecked(true);
                 }
                 else if(!TypeF.isChecked() && !("".equals(countF.getText().toString())) && errorCheck == 0){
+                    errorCheck++;
                     errorA();
                 }
                 else{
