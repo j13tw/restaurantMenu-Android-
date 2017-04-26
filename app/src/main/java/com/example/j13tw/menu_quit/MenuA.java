@@ -138,7 +138,7 @@ public class MenuA extends AppCompatActivity {
                     }
                     else{
                         cash += Integer.parseInt(countD.getText().toString())*200;
-                        kal += Integer.parseInt(countD.getText().toString())*900;
+                        kal += Integer.parseInt(countD.getText().toString())*950;
                         mealCount++;
                         show.putInt("countD", Integer.parseInt(countD.getText().toString()));
                     }
@@ -148,7 +148,7 @@ public class MenuA extends AppCompatActivity {
                     errorA();
                 }
                 else{
-                    show.putInt("countE", 0);
+                    show.putInt("countD", 0);
                 }
                 if(TypeE.isChecked() && !("".equals(countE.getText().toString())) && errorCheck == 0){
                     if(Integer.parseInt(countE.getText().toString()) <= 0){

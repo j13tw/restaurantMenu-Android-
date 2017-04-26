@@ -146,7 +146,7 @@ public class MenuC extends AppCompatActivity {
                     errorA();
                 }
                 else{
-                    show.putInt("countE", 0);
+                    show.putInt("countDoo", 0);
                 }
                 if(TypeE.isChecked() && !("".equals(countE.getText().toString())) && errorCheck == 0){
                     if(Integer.parseInt(countE.getText().toString()) <= 0){
