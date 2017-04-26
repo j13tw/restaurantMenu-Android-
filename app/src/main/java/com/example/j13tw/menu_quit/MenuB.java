@@ -66,6 +66,8 @@ public class MenuB extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 int errorCheck = 0;
+                cash = 0;
+                kal = 0;
                 if((!TypeA.isChecked() && ("".equals(countA.getText().toString()))) && (!TypeB.isChecked() && ("".equals(countB.getText().toString()))) && (!TypeC.isChecked() && ("".equals(countC.getText().toString()))) && (!TypeD.isChecked() && ("".equals(countD.getText().toString()))) && (!TypeE.isChecked() && ("".equals(countE.getText().toString()))) && (!TypeF.isChecked() && ("".equals(countF.getText().toString()))) && errorCheck == 0){
                     errorCheck++;
                     errorA();
@@ -133,7 +135,7 @@ public class MenuB extends AppCompatActivity {
                         errorA();
                     }
                     else{
-                        cash += Integer.parseInt(countD.getText().toString())*180;
+                        cash += Integer.parseInt(countD.getText().toString())*80;
                         kal += Integer.parseInt(countD.getText().toString())*130;
                         mealCount++;
                         show.putInt("countD", Integer.parseInt(countD.getText().toString()));
